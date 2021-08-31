@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss public/styles/tailwind.css -o public/styles/style.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/busybox11/groupify#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "autoprefixer": "^10.3.3",
+    "express": "^4.17.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.9"
   }
 }
