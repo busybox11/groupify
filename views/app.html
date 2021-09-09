@@ -13,15 +13,24 @@
 
     <body class="flex bg-black text-white h-full">
         <div id="app" class="flex flex-col md:flex-row h-full w-full">
-            <div id="navbar" class="bg-gray-800 md:py-4 md:px-6 md:h-screen w-full md:w-56 lg:w-64 xl:w-72 absolute md:relative bottom-0 left-0">
+            <nav id="navbar" class="bg-gray-800 md:py-4 md:px-6 md:min-h-screen min-h-0 w-full md:w-56 lg:w-64 xl:w-72 absolute md:relative bottom-0 left-0">
                 <span class="text-xl font-bold mb-4 hidden md:block">Groupify</span>
 
-                <div class="flex flex-row md:flex-col md:space-y-1 md:-mx-2">
+                <div class="flex flex-row md:flex-col md:space-y-1 md:-mx-2 relative">
                     <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl md:shadow md:bg-gray-700 w-full"><span class="mdi mdi-home text-xl md:mr-2 -mb-2 md:-mb-0"></span>Home</button>
                     <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl transition-colors md:hover:shadow md:hover:bg-gray-700 text-gray-400 hover:text-white w-full"><span class="mdi mdi-magnify text-xl md:mr-2 -mb-2 md:-mb-0"></span>Search</button>
                     <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl transition-colors md:hover:shadow md:hover:bg-gray-700 text-gray-400 hover:text-white w-full"><span class="mdi mdi-music-box-multiple text-xl md:mr-2 -mb-2 md:-mb-0"></span>Library</button>
+                    
+                    <!-- FAB group button -->
+                    <button class="flex md:hidden rounded-full bg-green-900 h-12 w-12 shadow flex-shrink-0 absolute bottom-20 right-6"><span class="mdi mdi-account-group m-auto text-2xl"></span></button>
                 </div>
-            </div>
+
+                <div id="shortcuts" class="hidden md:flex flex-col min-h-0 h-full mt-6">haha</div>
+                    
+                <div class="-mx-4 my-2">
+                    <div id="groupsidebar" class="w-full rounded-xl px-4 py-2 bg-gray-900">hoho</div>
+                </div>
+            </nav>
 
             hehe
         </div>
