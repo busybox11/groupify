@@ -12,36 +12,127 @@
     </head>
 
     <body class="flex bg-black text-white h-full">
-        <div id="app" class="flex flex-col md:flex-row h-full w-full">
-            <nav id="navbar" class="flex flex-col bg-gray-800 md:pt-4 md:pb-2 md:px-6 md:min-h-screen min-h-0 w-full md:w-56 lg:w-64 xl:w-72 absolute md:relative bottom-0 left-0">
-                <span class="text-xl font-bold mb-4 hidden md:block">Groupify</span>
+        <div id="app" class="flex flex-col h-full w-full">
+            <div class="flex flex-col md:flex-row h-full">
+                <nav id="navbar" class="flex flex-col bg-gray-800 md:pt-4 md:pb-2 md:px-6 md:min-h-full min-h-0 w-full md:w-56 lg:w-64 xl:w-72 absolute md:relative bottom-0 left-0">
+                    <span class="text-xl font-bold mb-4 hidden md:block">Groupify</span>
 
-                <div class="flex flex-row md:flex-col md:space-y-1 md:-mx-2 relative">
-                    <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl md:shadow md:bg-gray-700 w-full"><span class="mdi mdi-home text-xl md:mr-2 -mb-2 md:-mb-0"></span>Home</button>
-                    <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl transition-colors md:hover:shadow md:hover:bg-gray-700 text-gray-400 hover:text-white w-full"><span class="mdi mdi-magnify text-xl md:mr-2 -mb-2 md:-mb-0"></span>Search</button>
-                    <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl transition-colors md:hover:shadow md:hover:bg-gray-700 text-gray-400 hover:text-white w-full"><span class="mdi mdi-music-box-multiple text-xl md:mr-2 -mb-2 md:-mb-0"></span>Library</button>
-                    
-                    <!-- FAB group button -->
-                    <button class="flex md:hidden rounded-full bg-green-900 h-12 w-12 shadow flex-shrink-0 absolute bottom-20 right-6"><span class="mdi mdi-account-group m-auto text-2xl"></span></button>
-                </div>
+                    <div class="flex flex-row md:flex-col md:space-y-1 md:-mx-2 relative">
+                        <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl md:shadow md:bg-gray-700 w-full"><span class="mdi mdi-home text-xl md:mr-2 -mb-2 md:-mb-0"></span>Home</button>
+                        <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl transition-colors md:hover:shadow md:hover:bg-gray-700 text-gray-400 hover:text-white w-full"><span class="mdi mdi-magnify text-xl md:mr-2 -mb-2 md:-mb-0"></span>Search</button>
+                        <button class="flex flex-col md:flex-row items-center px-4 py-2 rounded-xl transition-colors md:hover:shadow md:hover:bg-gray-700 text-gray-400 hover:text-white w-full"><span class="mdi mdi-music-box-multiple text-xl md:mr-2 -mb-2 md:-mb-0"></span>Library</button>
+                        
+                        <!-- FAB group button -->
+                        <button class="flex md:hidden rounded-full bg-green-900 h-12 w-12 shadow flex-shrink-0 absolute bottom-20 right-6"><span class="mdi mdi-account-group m-auto text-2xl"></span></button>
+                    </div>
 
-                <div id="shortcuts" class="hidden md:flex flex-col min-h-0 h-full mt-6">haha</div>
-                    
-                <div class="hidden md:block -mx-4 mt-2">
-                    <div id="groupsidebar" class="w-full rounded-xl px-4 py-3 bg-gray-900">
-                        <span class="text-md font-normal text-gray-400 uppercase tracking-widest -mr-1">Group session</span>
-                        <h4 class="text-4xl font-black tracking-widest mb-2 -mt-1">8473</h4>
-
-                        <div class="flex flex-row px-2 -ml-0.5">
-                            <img class="h-8 w-8 rounded-full -ml-2 border-2 border-gray-900" src="https://i.scdn.co/image/ab6775700000ee853245f829685ec05d6a74ed14">
-                            <img class="h-8 w-8 rounded-full -ml-2 border-2 border-gray-900" src="https://i.scdn.co/image/ab6775700000ee85c9e9f1ca11d7425e3a1ca23c">
-                            <img class="h-8 w-8 rounded-full -ml-2 border-2 border-gray-900" src="https://i.scdn.co/image/ab6775700000ee854c54daa9fe83d5711b506573">
+                    <div id="shortcuts" class="hidden md:flex flex-col min-h-0 h-full mt-8">
+                        <span class="text-md font-normal text-gray-400 uppercase tracking-widest -mr-1 mb-2">Shortcuts</span>
+                        <div id="shortcuts-list" class="flex flex-col space-y-2 h-full overflow-auto -mr-3 pr-3">
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">Discover Weekly</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee853245f829685ec05d6a74ed14">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">Un peu tout🎲</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee854c54daa9fe83d5711b506573">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">those songs</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee853245f829685ec05d6a74ed14">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">Rap US</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee85c9e9f1ca11d7425e3a1ca23c">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">Skate🛹</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee854c54daa9fe83d5711b506573">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">Oof</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee854c54daa9fe83d5711b506573">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate"><3</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee85c9e9f1ca11d7425e3a1ca23c">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">Indie mix</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee853245f829685ec05d6a74ed14">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">Boum boum</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee854c54daa9fe83d5711b506573">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">have some sleep</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee853245f829685ec05d6a74ed14">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">ily</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee85c9e9f1ca11d7425e3a1ca23c">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">ily more</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee85c9e9f1ca11d7425e3a1ca23c">
+                            </a>
+                            <a class="flex flex-row justify-between items-center">
+                                <span class="truncate">all i wanna do is hold you right in my arms and never let you go</span>
+                                <img class="h-6 w-6 rounded-full ml-2" src="https://i.scdn.co/image/ab6775700000ee853245f829685ec05d6a74ed14">
+                            </a>
                         </div>
                     </div>
-                </div>
-            </nav>
+                        
+                    <div class="hidden md:block -mx-4 mt-2">
+                        <div id="groupsidebar" class="w-full rounded-xl p-4 bg-gray-900">
+                            <span class="text-md font-normal text-gray-400 uppercase tracking-widest -mr-1">Group session</span>
+                            <h4 class="text-4xl font-black tracking-widest mb-2 -mt-1">8473</h4>
 
-            hehe
+                            <div class="flex flex-row justify-between items-end">
+                                <div class="flex flex-row px-2 -ml-0.5">
+                                    <img class="h-8 w-8 rounded-full -ml-2 border-2 border-gray-900" src="https://i.scdn.co/image/ab6775700000ee853245f829685ec05d6a74ed14">
+                                    <img class="h-8 w-8 rounded-full -ml-2 border-2 border-gray-900" src="https://i.scdn.co/image/ab6775700000ee85c9e9f1ca11d7425e3a1ca23c">
+                                    <img class="h-8 w-8 rounded-full -ml-2 border-2 border-gray-900" src="https://i.scdn.co/image/ab6775700000ee854c54daa9fe83d5711b506573">
+                                </div>
+                                <button class="flex bg-red-600 h-8 w-8 shadow rounded-full"><i class="mdi mdi-exit-to-app m-auto"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div id="app-content" class="my-4 mx-6 h-full">
+                    hehe
+                </div>
+            </div>
+            <div id="player" class="w-full flex flex-row bg-gray-900 justify-between">
+                <div class="flex flex-row w-full">
+                    <img id="player-artwork" class="h-28 w-28 p-2 rounded-2xl" src="https://i.scdn.co/image/ab67616d00001e025b08b21e261dab5b838041bd">
+                    <div class="flex flex-col ml-2 my-auto">
+                        <a class="text-2xl font-semibold truncate">98 Degrees</a>
+                        <a class="text-lg font-medium text-gray-400 -mt-2 truncate">vlush</a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center w-2/5 flex-shrink-0 my-auto space-y-3">
+                    <div class="flex flex-row items-center space-x-6">
+                        <button class="text-gray-400 hover:text-gray-100"><i class="mdi mdi-shuffle m-auto text-2xl"></i></button>
+                        <button class="text-gray-400 hover:text-gray-100"><i class="mdi mdi-skip-previous m-auto text-2xl"></i></button>
+                        <button class="flex h-10 w-10 bg-white rounded-full outline-none transform hover:scale-105"><i class="mdi mdi-pause m-auto text-black text-2xl"></i></button>
+                        <button class="text-gray-400 hover:text-gray-100"><i class="mdi mdi-skip-next m-auto text-2xl"></i></button>
+                        <button class="text-gray-400 hover:text-gray-100"><i class="mdi mdi-repeat m-auto text-2xl"></i></button>
+                    </div>
+                    <div class="flex flex-row items-center space-x-3 w-full">
+                        <span class="tracking-widest -mr-1 text-sm">1:36</span>
+                        <div id="progress" class="flex flex-row h-2 p-0.5 rounded-full w-full bg-gray-600">
+                            <div class="h-1 w-2/5 bg-white rounded-full z-10"></div>
+                            <div class="h-3 w-3 rounded-full bg-white -mt-1 -ml-1 border-2 border-gray-600"></div>
+                        </div>
+                        <span class="tracking-widest -mr-1 text-sm">4:12</span>
+                    </div>
+                </div>
+                <div class="flex flex-col items-end w-full my-auto pr-6">
+                    hoho
+                </div>
+            </div>
         </div>
 
         <script src="/js/alpine-3.2.4.js" defer></script>
